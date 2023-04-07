@@ -1,0 +1,270 @@
+
+
+
+/* GENERAL */
+
+@font-face {
+    font-family: 'rubik-reg';
+    src: url('fonts/Rubik-Regular.ttf');
+    font-style: normal;
+}
+
+:root {
+	--white: #FCFCFC;
+	--grey: #F2F2F2;
+	--black: #202020;
+	--orange: #FF7A00;
+	--darkgrey: #737373;
+}
+
+
+
+
+
+/* SECTION 1 – INTRODUCTION */
+
+#introduction {
+
+	background-image: url("images/background.jpg");
+  	background-size: cover;
+  	height: 52vh;
+
+  	padding-top: 24vh;
+	padding-left: 15%;
+	padding-right: 15%;
+
+	color: var(--white);
+}
+
+.header {
+	font-family: rubik-reg;
+	font-weight: 400;
+	font-size: 0.8em;
+	letter-spacing: .025em;
+	width: 80%;
+
+	display: flex;
+	flex-direction: row ;
+	align-items: baseline;
+}
+
+.flexchild	a {
+	margin-left: 16px;
+	color: var(--white);
+	text-decoration: none;
+}
+
+.flexchild-name {
+	margin-left: -14px;
+	font-weight: 600;
+}
+
+.flexchild	p {
+	margin-left: 16px;
+}
+
+
+
+#intro-line {
+	width: 80%;
+	margin-top: 2.25vh;
+
+	font-family: rubik-reg;
+	font-weight: 250;
+	font-size: 2.25em;
+}
+
+
+
+
+/* SECTION 2 – PORTFOLIO */
+
+.portfolio {
+	background-color: var(--grey);
+
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-bottom: 12vh;
+}
+
+.filter {
+	font-family: rubik-reg;
+	font-weight: 350;
+	font-size: 0.95em;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: baseline;
+
+	padding-top: 7vh;
+	padding-bottom: 4vh;
+}
+
+.filter p {
+	padding-right: 20px;
+}
+
+.filter p:hover {
+	font-weight: 600;
+}
+
+#selected {
+	font-weight: 600;
+	text-decoration: underline;
+	text-decoration-thickness: 12%;
+	text-underline-offset: 3px;
+}
+
+
+.project-title {
+	font-family: rubik-reg;
+	font-weight: 350;
+	font-size: 0.825em;
+	width: 80%;
+
+	display: flex;
+	flex-direction: row ;
+	align-items: baseline;
+}
+
+.project {
+	transition: .5s ease;
+	opacity: 1;
+}
+
+.project:hover {
+	opacity: 0.6;
+}
+
+.portfolio-projects p {
+	margin-top: 0.35vh;
+	margin-bottom: 20px;
+	padding-left: 5px;
+
+	color: var(--darkgrey)
+}
+
+.portfolio-projects p:first-child {
+	font-family: rubik-reg;
+	padding-left: 0px;
+	font-weight: 600;
+
+	text-transform: uppercase;
+	letter-spacing: .015em;
+
+	margin-top: 4px;
+	margin-bottom: 0vh;
+
+	color: var(--black)
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 10px;
+}
+
+.imgContainer {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.project img{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/* SECTION 3 – FOOTER */
+
+.footer {
+	background-color: var(--black);
+
+	padding-top: 7vh;
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-bottom: 12vh;
+}
+
+.footer p {
+	color: var(--white);
+	
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 0.75vh;
+	margin-right: 0px;
+
+	font-family: rubik-reg;
+	font-weight: 350;
+	font-size: 0.95em;
+}
+
+.footer p:first-child {
+	font-family: rubik-reg;
+	font-weight: 500;
+	font-size: 0.95em;
+	margin-bottom: 1.25vh;
+}
+
+
+
+
+/* WIDTH QUERRIES */
+
+@media (max-width: 1500px) {
+	#introduction {padding-left: 10%; padding-right: 10%;}
+	.portfolio {padding-left: 10%; padding-right: 10%;}
+	.footer {padding-left: 10%; padding-right: 10%;}
+
+	#intro-line {font-size: 2em;}
+}
+
+@media (max-width: 960px) {
+	#introduction {padding-left: 6%; padding-right: 6%; height: 60vh; padding-top: 22vh;}
+	.portfolio {padding-left: 6%; padding-right: 6%;}
+	.footer {padding-left: 6%; padding-right: 6%;}
+	#intro-line {width: 90%; font-size: 1.75em;}
+	.grid {grid-template-columns: 1fr 1fr;}
+}
+
+@media (max-width: 648px) {
+	.filter p {padding-right: 12px;}
+}
+
+@media (max-width: 600px) {
+	.grid {grid-template-columns: 1fr}
+	div.hideMobile {display: none;}
+	.portfolio {padding-left: 4%; padding-right: 4%; padding-top: 4vh;}
+	#introduction {height: 68vh; padding-top: 18vh;}
+}
+
+@media (max-width: 400px) {
+	.header {width: 90%; flex-direction: column; align-items: flex-start; font-size: 0.9em}
+	.flexchild {margin-left: -14px; margin-top: 0.8vh}
+	p.hideMobile {display: none;}
+	div.hideMobile {display: none;}
+	.header a:nth-child(3) {margin-top: 2.5vh}
+	#introduction {height: 80vh; padding-top: 13vh;}
+	#intro-line {width: 100%; margin-top: 6vh; font-size: 1.6em; line-height: 132%}
+	
+}
+
+
+
+/* HEIGHT QUERRIES */
+
+@media (max-height: 660px) {
+	#introduction {height: 58vh; padding-top: 22vh;}
+}
+
+@media (max-height: 440px) {
+	#introduction {height: 64vh; padding-top: 18vh;}
+}
+
+@media (max-height: 400px) {
+	#intro-line {font-size: 1.6em; line-height: 132%}
+}
+
